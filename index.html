@@ -278,6 +278,17 @@
         </section>
     </div>
     <div class="bgded overlay row4" style="background-image:url('images/demo/backgrounds/01.png');">
+       <div id="loader">Loading...</div>
+        <div class="cursor"></div>
+
+<script>
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.top = e.pageY + 'px';
+});
+</script>
         <footer id="footer" class="hoc clear">
             <div class="center btmspace-50">
                 <h6 class="heading">ROBOCOMP.EXE</h6>
@@ -362,6 +373,35 @@ function typing() {
 
 document.getElementById("myHeading").innerHTML = "";
 typing();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<div id="particles-js"></div>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 1 },
+    line_linked: { enable: true },
+  }
+});
+</script>
+    <script>
+document.addEventListener("mousemove", (e) => {
+  let x = (window.innerWidth / 2 - e.pageX) / 50;
+  let y = (window.innerHeight / 2 - e.pageY) / 50;
+
+  document.querySelectorAll(".one_third").forEach(el => {
+    el.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+  });
+});
+    </script>
+    <script>
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
     </script>
 </body>
 
