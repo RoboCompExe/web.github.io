@@ -1750,4 +1750,14 @@ table a,
     .font-x3 {
         font-size: 1.6rem;
     }
+    .animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 }
