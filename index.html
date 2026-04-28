@@ -348,6 +348,21 @@
     <script src="layout/scripts/jquery.min.js"></script>
     <script src="layout/scripts/jquery.backtotop.js"></script>
     <script src="layout/scripts/jquery.mobilemenu.js"></script>
+    <script>
+const text = "Product Branding as Programmer";
+let i = 0;
+
+function typing() {
+  if (i < text.length) {
+    document.getElementById("myHeading").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}
+
+document.getElementById("myHeading").innerHTML = "";
+typing();
+    </script>
 </body>
 
 </html>
