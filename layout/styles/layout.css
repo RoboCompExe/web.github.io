@@ -1760,4 +1760,43 @@ table a,
   opacity: 1;
   transform: translateY(0);
 }
+    .imgover img {
+  transition: 0.4s;
+}
+
+.imgover:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+    .bgded {
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000000);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+    .icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+    .one_third {
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.one_third:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+    html {
+  scroll-behavior: smooth;
+    }
 }
